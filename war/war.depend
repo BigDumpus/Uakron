@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1537805257 source:d:\codeblook\war\card.cpp
+	"card.hpp"
+
+1537805257 d:\codeblook\war\card.hpp
+	<iostream>
+	<deque>
+

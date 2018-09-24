@@ -34,12 +34,16 @@ enum Rank
 class Card
 {
     public:
-        Card(Rank r, Suit s); // constructor declaration. my friend told me to stop doing inline definitions.
+        Card( Suit , Rank ); // constructor declaration. my friend told me to stop doing inline definitions.
+        Rank getRank();
+        Suit getSuit(); // retreives suit without allowing modifications i think if i did it right
+        friend std::ostream& operator<<(std::ostream& os, const Card& c);
 
     private: // don't let people change cards because thats cheating
-        Rank = e_rank; // my friend said somthing about enumerated things should have e on them so i did e
-        Suit = e_suit;
+        Rank e_rank; // my friend said somthing about enumerated things should have e on them so i did e
+        Suit e_suit;
 };
+
 
 
 // need to make get functions for to get rank and suit for bools and couts how do i do that

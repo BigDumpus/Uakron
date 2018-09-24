@@ -2,12 +2,28 @@
 #include "card.hpp" // makes header file happen here
 
 
-Card::Card(Rank r, Suit) // here is the constructor definition from earlier
+Card::Card(Suit s, Rank r) // here is the constructor definition from earlier
     // im not knowing what this is : e_rank(r) wait i get it
     {
         e_suit = s;
         e_rank =r;
     } // do i need to make a default constructor i dont remeber i think we all agreed that the idea of a default card isnt really a thing.
+
+    Rank Card::getRank()
+    {
+        return e_rank;
+    }
+
+    Suit Card::getSuit()
+    {
+        return e_suit;
+    }
+
+    std::ostream& operator<<(std::ostream& os, const Card& c) // allows cout to print card rank and suit thats usefuel
+{
+   os<< c.getRank() << c.getSuit() << std::endl;
+   return os;
+}
 
     Deck
     make_deck() // function for making deck probably
