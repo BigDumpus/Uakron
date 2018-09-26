@@ -7,7 +7,7 @@
 
 enum Suit // makes variable type Suit
 {
-    hearts, // things a Suit variable can be i guess
+    hearts =1, // things a Suit variable can be i guess
     diamonds,
     spades,
     clubs,
@@ -15,7 +15,7 @@ enum Suit // makes variable type Suit
 
 enum Rank
 {
-    ace,
+    ace =1,
     two,
     three,
     four,
@@ -37,7 +37,7 @@ class Card
         Card( Suit , Rank ); // constructor declaration. my friend told me to stop doing inline definitions.
         Rank getRank();
         Suit getSuit(); // retreives suit without allowing modifications i think if i did it right
-        friend std::ostream& operator<<(std::ostream& os, const Card& c);
+        friend std::ostream& operator<<(std::ostream& os,  Card& c);
 
     private: // don't let people change cards because thats cheating
         Rank e_rank; // my friend said somthing about enumerated things should have e on them so i did e

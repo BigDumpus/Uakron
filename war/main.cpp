@@ -4,11 +4,9 @@
 // its getting late. i think we are going to have a study/ do this in class day tommorow ill just do the rest then.
 int main()
 {
-
-    Card c (spades, two);
-   std::cout << c;
-   //std::cout <<c.getRank(); alritght so it sort of works how do i make it print a for ace and s for spades. i feel bad because im actually just trying to catch up to where he was in class
-    return 0;
+    /*make_deck(); // how do i make the deck.
+    std::cout << c0;*/
+   return 0;
 }
 /* to do
 make card class:
@@ -19,6 +17,8 @@ make card sorter and card shuffler(unsorter) i think it can go in main
 update:
     the ostream overload isnt coming along as i easily as i thouht it would. also i dont remember how he made the out put like AS for ace spades and stuff like that. i mean if i do get it working now the out put for std::cout << c0; would be 02 which is fine if bad hard to read stuff is good.
     once i can print cards and stuff the actual practice will begin i suppose.
+    alright the << operator is overloaded now i just need it to print the things i want it to print. like A for ace and 2 for two intstead of the mess it it now. also i tried to call c0 from the deck but it didnt work that needs to be fixed
+    okay << is working great now i think i just need to make the Deck i made work in main and then i can make the sorter and shuffler. after that i can acutally get to work on making war happen
 
 make the war game itself:
     i think its cpu v cpu so have it simulate splitting one deck (some fuction that splits a deque into two = deque) randomly ( using shuffle(unsort)) for playing i think i may need a deque for the spoils pile because it may not be just two cards at a time and even if it is maybe a spoils deque would be handy still for the next part also really figure out how deques work and how they relate to vectors.

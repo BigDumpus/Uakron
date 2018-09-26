@@ -1,8 +1,12 @@
 # depslib dependency file v1.0
-1537805257 source:d:\codeblook\war\card.cpp
+1537977195 source:d:\codeblook\war\card.cpp
 	"card.hpp"
 
-1537805257 d:\codeblook\war\card.hpp
+1537976605 d:\codeblook\war\card.hpp
 	<iostream>
 	<deque>
+
+1537976547 source:d:\codeblook\war\main.cpp
+	"card.hpp"
+	<iostream>
 

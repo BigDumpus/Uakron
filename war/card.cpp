@@ -6,7 +6,7 @@ Card::Card(Suit s, Rank r) // here is the constructor definition from earlier
     // im not knowing what this is : e_rank(r) wait i get it
     {
         e_suit = s;
-        e_rank =r;
+        e_rank = r;
     } // do i need to make a default constructor i dont remeber i think we all agreed that the idea of a default card isnt really a thing.
 
     Rank Card::getRank()
@@ -19,14 +19,39 @@ Card::Card(Suit s, Rank r) // here is the constructor definition from earlier
         return e_suit;
     }
 
-    std::ostream& operator<<(std::ostream& os, const Card& c) // allows cout to print card rank and suit thats usefuel
+    std::ostream& operator<<(std::ostream& os,  Card& c) // allows cout to print card rank and suit thats usefuel
 {
-   os<< c.getRank() << c.getSuit() << std::endl;
+    switch(c.getRank())
+    {
+        case 1: os<<'A';
+        break;
+        case 11: os<<'J';
+        break;
+        case 12: os<<'Q';
+        break;
+        case 13: os<<'K';
+        break;
+        default: os<< c.getRank();
+    }
+
+    switch (c.getSuit())
+    {
+        case 1: os<<'H';
+        break;
+        case 2: os<<'D';
+        break;
+        case 3: os<<'S';
+        break;
+        case 4: os<<'C';
+        break;
+    }
+
+   //os<< c.getRank() << c.getSuit() << std::endl;
    return os;
 }
 
     Deck
-    make_deck() // function for making deck probably
+    make_deck() // function for making deck probably // its not seeming to be making a deck. but ive almost gotten to the point he was in class last week.
     {
     // since i have suit first then suit must be first i think
         Card c0 {hearts, ace};
